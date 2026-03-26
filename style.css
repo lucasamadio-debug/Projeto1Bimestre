@@ -1,43 +1,48 @@
-body {
+* { /* css global */
+    overflow-x: hidden;
+}
+
+body { /* css do body */
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    /* remove a margem padrão do navegador */
+    margin: 0;  /* remove a margem padrão do navegador */
     background-color: gray;
 }
 
-header {
-    width: 100%;
-    /* largura da pagina */
+header { /* css do header */
+    width: 100%;  /* largura da pagina */
     background-color: red;
-    box-shadow: 1px 1px 20px #ccc;
-    padding: 1px;
-    /* margem dentro do objeto*/
-    box-sizing: border-box;
-    /* para o padding não aumentar a largura do header */
+    box-shadow: 1px 1px 10px black;
+    padding: 1px; /* margem dentro do objeto*/
+    box-sizing: border-box;  /* para o padding não aumentar a largura do header */
     height: 80px;
+    overflow-y: hidden;
 }
 
-header nav {
-    float: right;
-    margin-top: 30px;
+
+header nav { /* css do menu */
+    float: right; /* para o menu ficar do lado direito */
+    margin-top: 30px; /* para o menu ficar mais centralizado verticalmente */
 }
 
-header nav a {
+
+header nav a { /* css dos links do menu */
     text-decoration: none;
     color: white;
     margin: 15px;
 }
 
-header nav a:hover {
+
+header nav a:hover { /* css dos links do menu quando o mouse passa por cima */
     color: black;
 }
 
-section {
+
+section {/* css das paginas*/
     padding: 50px;
 
     h1 {
-        text-align: center;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-align: center; /* para o titulo ficar centralizado */
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* para o titulo ficar com a fonte  */
 
     }
 
@@ -48,15 +53,16 @@ section {
     }
 
     img {
-        border-radius: 20px;
-        display: block;
-        margin: 0 auto;
+        border-radius: 20px; /* para as imagens ficarem com bordas arredondadas */
+        display: block; /* para as imagens ficarem em blocos separados */
+        margin: 0 auto; /* para as imagens ficarem centralizadas */
     }
 }
 
-.sobre {
+.sobre { /* css da pagina sobre */
     text-align: center;
-    padding: 50px;
+    padding: 50px; /* para a pagina ficar com um espaçamento maior */
+    margin-top: auto;
 }
 
 .sobre h1 {
@@ -66,8 +72,55 @@ section {
 
 .sobre p {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px; /* para o texto ficar com um tamanho maior */
+    line-height: 1.6; /* para o texto ficar com um espaçamento maior entre as linhas */
+    max-width: 800px;  /* para o texto ficar com uma largura máxima */
+    margin: 20px auto
+}
+
+.criador {    /* css do criador */
+ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
-    margin: 20px auto
+    margin: 0 auto  
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 250px 250px; /* define duas colunas de largura fixa */
+    gap: 10px; /* espaço entre as colunas */
+    text-align: center;
+    justify-content: center;   /* para o grid ficar centralizado horizontalmente */
+    margin: 0 auto;
+}
+
+.grid img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 30px;
+}
+
+
+.galeria { /* css da galeria */
+    padding: 50px;
+}
+
+
+.cadastro {/* css do cadastro */
+    text-align: center;
+    padding: 50px;
+    margin-top: auto;
+}
+
+
+footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0 ; /* para o footer ficar fixo no final da pagina */
+    width: 100%;
+    
+}
+ 
