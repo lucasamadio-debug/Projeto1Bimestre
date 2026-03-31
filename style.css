@@ -113,6 +113,15 @@ section {/* css das paginas*/
     margin-top: auto;
 }
 
+.botao {
+   border: 20px black;
+   background: rgb(7, 113, 7);
+    color: white;
+    padding: 0px 20px;
+    border-color: black;
+    border-radius: 10px; 
+}
+
 
 footer {
     background-color: red;
@@ -123,4 +132,5 @@ footer {
     width: 100%;
     
 }
+
  
