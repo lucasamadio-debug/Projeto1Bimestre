@@ -182,7 +182,7 @@ footer {
 
 }
 
-/* --- CONFIGURAÇÕES PARA CELULAR --- */
+/* ---configuraçao celular --- */
 
 @media (max-width: 768px) {
     header {
@@ -230,6 +230,5 @@ footer {
         height: auto;
         /* Deixa a altura automática para não distorcer */
         width: 90%;
-        /* Quase toda a largura da tela */
     }
 }
