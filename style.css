@@ -1,52 +1,42 @@
-* {
-    /* css global */
-    overflow-x: hidden;
-}
 
+
+/* css do body */
 body {
-    /* css do body */
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    /* remove a margem padrão do navegador */
-    background-color: gray;
+    font-family: "Oswald", sans-serif;
+    margin: 0;   /* remove a margem padrão do navegador */
+    background-color: #4a1818;
 }
 
+/* css do header */
 header {
-    /* css do header */
-    width: 100%;
-    /* largura da pagina */
-    background-color: rgb(154, 3, 3);
+    width: 100%;     /* largura da pagina */
+    background-color: #1A0A0E;
     box-shadow: 1px 1px 10px black;
-    padding: 1px;
-    /* margem dentro do objeto*/
-    box-sizing: border-box;
-    /* para o padding não aumentar a largura do header */
+    padding: 1px;    /* margem dentro do objeto*/
+    box-sizing: border-box;  /* para o padding não aumentar a largura do header */
     height: 80px;
     overflow-y: hidden;
 }
 
 
-
+ /* css do menu */
 header nav {
-    /* css do menu */
-    float: right;
-    /* para o menu ficar do lado direito */
-    margin-top: 30px;
-    /* para o menu ficar mais centralizado verticalmente */
+
+    float: right;    /* para o menu ficar do lado direito */
+    margin-top: 30px;    /* para o menu ficar mais centralizado verticalmente */
 }
 
-
+ /* css dos links do menu */
 header nav a {
-    /* css dos links do menu */
+    font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: #eed0d2;
     margin: 15px;
 }
 
-
+/* css dos links do menu quando o mouse passa por cima */
 header nav a:hover {
-    /* css dos links do menu quando o mouse passa por cima */
-    color: black;
+    color: #D71515;
 }
 
 
@@ -55,52 +45,46 @@ section {
     padding: 50px;
 
     h1 {
-        text-align: center;
-        /* para o titulo ficar centralizado */
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        /* para o titulo ficar com a fonte  */
-
+        text-align: center;      /* para o titulo ficar centralizado */
+        font-family: "Oswald", sans-serif;     /* para o titulo ficar com a fonte  */
+        color: #eed0d2;
     }
 
     h2 {
         text-align: center;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
+        font-family: "Oswald", sans-serif;
+        color: #eed0d2;
+        margin-bottom: 50px;
     }
 
     img {
-        border-radius: 20px;
-        /* para as imagens ficarem com bordas arredondadas */
-        display: block;
-        /* para as imagens ficarem em blocos separados */
-        margin: 0 auto;
-        /* para as imagens ficarem centralizadas */
+        border-radius: 20px;  /* para as imagens ficarem com bordas arredondadas */
+        display: block;      /* para as imagens ficarem em blocos separados */
+        margin: 0 auto;      /* para as imagens ficarem centralizadas */
     }
 }
 
 /* fim das paginas*/
 
+ /* css da pagina sobre */
 .sobre {
-    /* css da pagina sobre */
+    font-family: "Oswald", sans-serif;
     text-align: center;
-    padding: 50px;
-    /* para a pagina ficar com um espaçamento maior */
+    padding: 50px;   /* para a pagina ficar com um espaçamento maior */
     margin-top: auto;
 }
 
 .sobre h1 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
+    font-family: "Oswald", sans-serif;
+    text-align: center;
 }
 
 .sobre p {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    /* para o texto ficar com um tamanho maior */
-    line-height: 1.6;
-    /* para o texto ficar com um espaçamento maior entre as linhas */
-    max-width: 800px;
-    /* para o texto ficar com uma largura máxima */
+    color: #eed0d2;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;     /* para o texto ficar com um tamanho maior */
+    line-height: 1.6;    /* para o texto ficar com um espaçamento maior entre as linhas */
+    max-width: 800px;   /* para o texto ficar com uma largura máxima */
     margin: 20px auto
 }
 
@@ -109,8 +93,8 @@ section {
 /* css do criador */
 
 .criador {
-    /* css do criador */
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #eed0d2;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
@@ -119,13 +103,10 @@ section {
 
 .grid {
     display: grid;
-    grid-template-columns: 250px 250px;
-    /* define duas colunas de largura fixa */
+    grid-template-columns: 250px 250px; /* deixa duas colunas*/
     gap: 10px;
-    /* espaço entre as colunas */
     text-align: center;
-    justify-content: center;
-    /* para o grid ficar centralizado horizontalmente */
+    justify-content: center; /* para o grid fica no meio */
     margin: 0 auto;
 }
 
@@ -140,6 +121,7 @@ section {
 .galeria {
     text-align: center;
     padding: 50px;
+    font-family: "Oswald", sans-serif;
     main{
         display: grid;
         grid-template-columns: repeat(3, 2fr);
@@ -151,34 +133,33 @@ section {
 
 /* Fim do css da galeria*/
 
-
-
-/* css do cadastro */
-
-.cadastro {
-    text-align: center;
-    padding: 50px;
-    margin-top: auto;
-}
-
 .botao {
+    font-weight: bold;
     border: 20px black;
-    background: rgb(7, 113, 7);
+    background: #D71515;
     color: white;
-    padding: 0px 20px;
+    padding: 10px 20px;
+    border: solid 2px;
     border-color: black;
     border-radius: 10px;
+}
+.botao:hover{
+    background-color: #1A0A0E;
+    color: #D71515;
+    border-color: #D71515;
+    transition: 0.1s;
 }
 
 
 footer {
-    background-color:  rgb(154, 3, 3);;
-    color: white;
+    font-family: "Oswald", sans-serif;
+    background-color:  #1A0A0E;
+    color: #eed0d2;
     text-align: center;
     padding: 10px;
-    bottom: 0;
-    /* para o footer ficar fixo no final da pagina */
+    position: fixed;
     width: 100%;
+    bottom: 0;
 
 }
 
@@ -230,5 +211,9 @@ footer {
         height: auto;
         /* Deixa a altura automática para não distorcer */
         width: 90%;
+    }
+    footer{
+        text-align: center;
+        
     }
 }
