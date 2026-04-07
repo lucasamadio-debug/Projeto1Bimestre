@@ -208,12 +208,11 @@ footer {
     }
 
     .grid img {
-        height: auto;
-        /* Deixa a altura automática para não distorcer */
+        height: auto; /* Deixa a altura automática para não distorcer */
         width: 90%;
     }
     footer{
         text-align: center;
-        
+
     }
 }
