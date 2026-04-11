@@ -79,7 +79,6 @@ section {
         color: #eed0d2;
         font-size: 20px;
         margin-top: 20px;
-        padding-bottom: 10px;
     }
 }
 
@@ -232,7 +231,7 @@ footer {
     }
 
         #conteudo-sensivel {
-            padding-bottom: 30px;
+            padding-bottom:  30px;
         }
 
     #container-seletor {
