@@ -1,38 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta charset="utf-8">
-      <title>Zumbilândia - Dead People</title>
-     <link rel="icon" href="imagens/imagemDeInicio.jpg">
-     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href="index.html" title="Home" >
-                <img src="imagens/logo5.png" alt="Logo do Jogo" title="Zumbilândia - Dead People" >
-            </a>
-            <nav>
-                <a href="index.html" title="Home">Home</a>
-                <a href="sobre.html" title="Sobre o Jogo">Sobre o Jogo</a>
-                <a href="criador.html" title="Criador">Criador</a>
-                <a href="galeria.html" title="Galeria">Galeria</a>
-                <a class="botao" href="Jogar.html" title="Login">Jogar</a>    
-            </nav>
-        </header>
-        <section>
-            <h1>Seja Bem-vindo ao Zumbilândia!</h1>
-            <img src="imagens/CapaInicio.png" alt="Capa do Jogo" title="Pessoa sendo cercada por zumbis">
-            <p> <h2>Venha explorar o mundo de Zumbilândia e enfretar desafios epicos!</h2></p>
-        </section>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Zumbilândia - Dead People</title>
+    <link rel="icon" href="imagens/imagemDeInicio.jpg">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" title="Home">
+            <img src="imagens/logo5edit.png" alt="Logo do Jogo" title="Zumbilândia - Dead People">
+        </a>
+
+        <nav>
+            <a href="index.html" title="Home">Home</a>
+            <a href="sobre.html" title="Sobre o Jogo">Sobre o Jogo</a>
+            <a href="criador.html" title="Criador">Criador</a>
+            <a href="galeria.html" title="Galeria">Galeria</a>
+            <a class="botao" href="Jogar.html" title="Login">Jogar</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Seja Bem-vindo ao Zumbilândia!</h1>
+        <img src="imagens/CapaInicio.png" alt="Capa do Jogo" id="capa-jogo" title="Pessoa sendo cercada por zumbis">
+        <h2>Venha explorar o mundo de Zumbilândia e enfretar desafios epicos!</h2>
+
+        <div id="info-jogo">
+            <p>Informacões do jogo</p>
+            <p><strong>Jogo:</strong> <span id="nomeJogo"></span></p>
+            <p><strong>Plataforma:</strong> <span id="Plataforma"></span></p>
+            <p><strong>Gênero:</strong> <span id="Gênero"></span></p>
+            <p><strong>Classificação:</strong> <span id="Idade"></span></p>
+            <p><strong>Preço:</strong> <span id="Preço"></span></p>
+        </div>
+
+        <div id="conteudo-sensivel">
+            <p>Esse conteúdo é para maiores de 18 anos!</p>
+        </div>
+    </section>
+
+    <script>
+
+        const containerTema = document.createElement("div");
+        const btnTema = document.createElement("button");
+
+        containerTema.id = "container-seletor";
+        btnTema.id = "alternar-tema";
+
+      
+        btnTema.innerText = "Tema Claro";
+
+        containerTema.style.position = "absolute";
+        containerTema.style.top = "90px";
+        containerTema.style.left = "20px";
+        containerTema.style.zIndex = "1000";
+
         
-    </body>
+        btnTema.style.padding = "10px 15px";
+        btnTema.style.cursor = "pointer";
+        btnTema.style.fontFamily = "'Oswald', sans-serif";
+        btnTema.style.borderRadius = "5px";
+        btnTema.style.transition = "0.3s";
+        btnTema.style.backgroundColor = "#1A0A0E";
+        btnTema.style.color = "#eed0d2";
+        btnTema.style.border = "2px solid #D71515";
+
+        containerTema.appendChild(btnTema);
+        document.body.prepend(containerTema);
+
+        btnTema.addEventListener("click", () => {
+            const corpo = document.body;
+
+            
+            if (corpo.style.backgroundColor === "rgb(215, 21, 21)" || corpo.style.backgroundColor === "#D71515") {
+               
+                corpo.style.backgroundColor = "#4a1818";
+                corpo.style.color = "#eed0d2";
+                btnTema.innerText = "Tema Claro";
+                btnTema.style.backgroundColor = "#1A0A0E";
+                btnTema.style.color = "#eed0d2";
+            } else {
+
+                corpo.style.backgroundColor = "#D71515";
+                corpo.style.color = "#ffffff";
+                btnTema.innerText = "Tema Escuro";
+                btnTema.style.backgroundColor = "#ffffff";
+                btnTema.style.color = "#1A0A0E";
+            }
+        });
+
+        const Game = "Zumbilândia - Dead People"
+        const plataformaJogo = "web"
+        const generoJogo = "sobrevivencia tiro 2d"
+        const IdadeMini = "18 anos"
+        const Preço = "gratis"
+
+        document.getElementById("nomeJogo").innerText = Game
+        document.getElementById("Plataforma").innerText = plataformaJogo
+        document.getElementById("Gênero").innerText = generoJogo
+        document.getElementById("Idade").innerText = IdadeMini
+        document.getElementById("Preço").innerText = Preço
+
+        const Ano_Lancamento = 2026;
+        let anoAtual = new Date().getFullYear();
+
+
+        if (anoAtual == Ano_Lancamento) {
+            alert("Esse jogo é um grande lançamento deste ano sobre um mundo novo para o publico");
+        }
+
+        let nomeVisitante = prompt("bem-Vindo a Zumbilândia - Dead People! Qual é seu nome?");
+        let idade = Number(prompt(" Ola " + nomeVisitante + " Qual é sua idade? "));
+
+        const imagemCapa = document.getElementById("capa-jogo");
+
+        if (idade >= 18) {
+            alert(" Obrigado " + nomeVisitante + " por confirmar sua Idade! Seu acesso foi liberado ");
+            imagemCapa.style.filter = "none";
+        } else {
+            alert(nomeVisitante + " por segurança impediremos o seu acesso a o conteudo sensivel! ");
+            imagemCapa.style.filter = "blur(20px)";
+        }
+
+    </script>
+
     <footer>
-        <p>Desevolvido por Lucas</p>
+        <p>Desevolvido por Lucas Amadio</p>
     </footer>
+</body>
+
 </html>

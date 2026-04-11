@@ -1,19 +1,17 @@
 
-
-/* css do body */
 body {
     font-family: "Oswald", sans-serif;
-    margin: 0;   /* remove a margem padrão do navegador */
+    margin: 0;   
     background-color: #4a1818;
 }
 
 /* css do header */
 header {
-    width: 100%;     /* largura da pagina */
+    width: 100%;    
     background-color: #1A0A0E;
     box-shadow: 1px 1px 10px black;
-    padding: 1px;    /* margem dentro do objeto*/
-    box-sizing: border-box;  /* para o padding não aumentar a largura do header */
+    padding: 1px;    
+    box-sizing: border-box;  
     height: 80px;
     overflow-y: hidden;
 }
@@ -22,11 +20,11 @@ header {
  /* css do menu */
 header nav {
 
-    float: right;    /* para o menu ficar do lado direito */
-    margin-top: 30px;    /* para o menu ficar mais centralizado verticalmente */
+    float: right;    
+    margin-top: 30px;    
 }
 
- /* css dos links do menu */
+ /*  links do menu */
 header nav a {
     font-weight: bold;
     text-decoration: none;
@@ -34,19 +32,31 @@ header nav a {
     margin: 15px;
 }
 
-/* css dos links do menu quando o mouse passa por cima */
+/* mudar cor da letra ao passa mouse */
 header nav a:hover {
     color: #D71515;
 }
 
+#info-jogo  {
+    background-color: #1A0A0E; 
+    color: #eed0d2;            
+    padding: 30px;             
+    border-radius: 15px;       
+    max-width: 500px; 
+    margin: 40px auto;         
+    text-align: left;          
+    border: 1px solid #D71515; 
 
+}
+
+
+/* section das letras*/
 section {
-    /* css das paginas*/
     padding: 50px;
 
     h1 {
-        text-align: center;      /* para o titulo ficar centralizado */
-        font-family: "Oswald", sans-serif;     /* para o titulo ficar com a fonte  */
+        text-align: center;    
+        font-family: "Oswald", sans-serif;    
         color: #eed0d2;
     }
 
@@ -58,19 +68,28 @@ section {
     }
 
     img {
-        border-radius: 20px;  /* para as imagens ficarem com bordas arredondadas */
-        display: block;      /* para as imagens ficarem em blocos separados */
-        margin: 0 auto;      /* para as imagens ficarem centralizadas */
+        border-radius: 20px;  
+        display: block;      
+        margin: 0 auto;      
+    }
+    
+    #conteudo-sensivel{
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        color: #eed0d2;
+        font-size: 20px;
+        margin-top: 20px;
+        padding-bottom: 10px;
     }
 }
 
 /* fim das paginas*/
 
- /* css da pagina sobre */
+ /* pagina sobre */
 .sobre {
     font-family: "Oswald", sans-serif;
     text-align: center;
-    padding: 50px;   /* para a pagina ficar com um espaçamento maior */
+    padding: 50px;   
     margin-top: auto;
 }
 
@@ -82,56 +101,72 @@ section {
 .sobre p {
     color: #eed0d2;
     font-family: "Oswald", sans-serif;
-    font-size: 18px;     /* para o texto ficar com um tamanho maior */
-    line-height: 1.6;    /* para o texto ficar com um espaçamento maior entre as linhas */
-    max-width: 800px;   /* para o texto ficar com uma largura máxima */
+    font-size: 18px;    
+    line-height: 1.6;    
+    max-width: 800px;   
     margin: 20px auto
 }
 
 /* Fim do sobre */
 
-/* css do criador */
+/*  criador */
 
 .criador {
     color: #eed0d2;
     font-family: "Oswald", sans-serif;
     font-size: 18px;
-    line-height: 1.6;
     max-width: 800px;
     margin: 0 auto
 }
 
-.grid {
+.grid  {
     display: grid;
-    grid-template-columns: 250px 250px; /* deixa duas colunas*/
-    gap: 10px;
+    gap: 20px;
     text-align: center;
     justify-content: center; /* para o grid fica no meio */
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
+}
+
+/*  criador */
+.criador + main .grid{
+    grid-template-columns: repeat(2, 250px);
 }
 
 .grid img {
     max-width: 100%;
-    height: 250px;
+    height: 270px;
     border-radius: 30px;
 }
 
 
- /* css da galeria */
+ /* galeria */
 .galeria {
     text-align: center;
     padding: 50px;
     font-family: "Oswald", sans-serif;
-    main{
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        gap: 20px ;
-        
-    }
+
 
 }
 
-/* Fim do css da galeria*/
+.grid-galeria {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.grid img{
+    width: 100%;
+    height: 300px;
+    transition: transform 0.3s;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+/* Fim da galeria*/
+
+/* jogar */
 
 .botao {
     font-weight: bold;
@@ -156,60 +191,59 @@ footer {
     background-color:  #1A0A0E;
     color: #eed0d2;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-sizing: border-box;
 
 }
 
-/* ---configuraçao celular --- */
+/*configuraçao celular*/
 
 @media (max-width: 768px) {
     header {
-        height: auto;
-        /* Deixa o header crescer se o menu quebrar linha */
+        height: auto; 
         padding: 0px;
-        overflow: visible;
-        /* Garante que o menu apareça */
+        overflow: visible; 
         
     }
 
     header nav {
         float: none;
-        /* Remove o float que quebra no mobile */
         text-align: center;
         margin-top: 10px;
         display: flex;
-        /* Alinha os links em bloco ou linha flexível */
         flex-wrap: wrap;
         justify-content: center;
     }
 
     header nav a {
-        margin: 5px 10px;
-        /* Diminui o espaço entre links para caberem */
+        margin: 5px 10px; 
         font-size: 14px;
     }
 
     section {
-        padding: 20px;/* Diminui o recuo lateral no celular */
+        padding: 20px;
 
         img{
             width: 100%;
         }
     }
 
-    /* Ajuste da Galeria (Grid) para celular */
-    .grid {
+    /* Ajuste da (Grid) para celular */
+    .grid, .grid-galeria, .criador + main .grid{
         grid-template-columns: 1fr;
-        /* No celular, fica apenas uma coluna de imagem */
         padding: 10px;
     }
 
     .grid img {
         height: auto;
-        /* Deixa a altura automática para não distorcer */
-        width: 90%;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
     }
 }
