@@ -231,6 +231,21 @@ footer {
         }
     }
 
+        #conteudo-sensivel {
+            padding-bottom: 30px;
+        }
+
+    #container-seletor {
+        left: 0 !important;  /* Reseta a distância da esquerda */
+        margin-top: 63px;     /* Empurra para baixo do header */
+    }
+
+    #alternar-tema {
+        font-size: 14px;  /* Ajuste opcional para o tamanho no celular */
+    }
+
+
+
     /* Ajuste da (Grid) para celular */
     .grid, .grid-galeria, .criador + main .grid{
         grid-template-columns: 1fr;
