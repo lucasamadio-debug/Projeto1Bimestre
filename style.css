@@ -121,7 +121,7 @@ section {
     display: grid;
     gap: 20px;
     text-align: center;
-    justify-content: center; /* para o grid fica no meio */
+    justify-content: center; 
     margin: 0 auto 100px auto;
 }
 
